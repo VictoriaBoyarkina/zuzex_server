@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://spontaneous-begonia-0c38c8.netlify.app",
+    origin: ["https://spontaneous-begonia-0c38c8.netlify.app", "https://strong-hamster-8ac3f6.netlify.app"],
     methods: ["GET", "POST"],
   },
 });
@@ -24,7 +24,7 @@ const messages = [];
 // Enable CORS
 app.use(
   cors({
-    origin: "https://spontaneous-begonia-0c38c8.netlify.app", // Allow your React app origin
+    origin: ["https://spontaneous-begonia-0c38c8.netlify.app", "https://strong-hamster-8ac3f6.netlify.app"],
     methods: ["GET", "POST"],
   })
 );
